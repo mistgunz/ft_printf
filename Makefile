@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 SRC = ft_putchar.c ft_putnbr.c ft_putstr.c ft_putnbr_unsigned.c\
- ft_hex_up.c ft_hex_low.c ft_paddress.c ft_printf.c
+ ft_hex_up.c ft_hex_low.c ft_address.c ft_printf.c
 OBJ = $(SRC:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs

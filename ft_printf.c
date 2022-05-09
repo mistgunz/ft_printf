@@ -1,15 +1,15 @@
 #include "ft_printf.h"
 
-int	ft_check(char c)
+int	isflag(char c)
 {
-	char	*str;
+	char	*flags;
 	int		i;
 
 	i = 0;
-	str = "cspdiuxX%";
-	while (str[i])
+	flags = "cspdiuxX%";
+	while (flags[i])
 	{
-		if (str[i] == c)
+		if (flags[i] == c)
 			return (1);
 		i++;
 	}
@@ -34,7 +34,7 @@ int	check(char c, va_list list)
 	else if (c == 'X')
 		len += ft_hex_up(va_arg(list, unsigned int));
 	else if (c == 'p')
-		len += ft_paddress(va_arg(list, unsigned long long));
+		len += ft_address(va_arg(list, unsigned long long));
 	else if (c == '%')
 		len += ft_putchar('%');
 	return (len);
@@ -51,7 +51,7 @@ int	ft_printf(const char *str, ...)
 	len = 0;
 	while (str[i])
 	{
-		if (str[i] == '%' && ft_check(str[i +1]) == 1)
+		if (str[i] == '%' && isflag(str[i +1]) == 1)
 		{
 			i++;
 			if (str[i] == '\0')

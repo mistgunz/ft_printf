@@ -11,7 +11,7 @@ int	ft_putnbr(int nbr);
 int	ft_putnbr_unsigned(unsigned int nb);
 int	ft_hex_low(unsigned int n);
 int	ft_hex_up(unsigned int nbr);
-int	ft_paddress(unsigned long long nbr);
+int	ft_address(unsigned long long nbr);
 int	ft_putstr(char *str);
 
 #endif
