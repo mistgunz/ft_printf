@@ -18,6 +18,11 @@ int	ft_paddress(unsigned long long nbr)
 	int	len;
 
 	len = 0;
+    if(nbr == 0)
+    {
+        len += ft_putstr("(nil)");
+        return(len);
+    }
 	len += ft_putstr("0x");
 	len += ft_hex(nbr);
 	return (len);
